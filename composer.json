@@ -3,6 +3,7 @@
     "description": "Immutable class to store time durations",
     "type": "library",
     "license": "MIT",
+    "version": "0.0.0-dev",
     "require": {
         "php": ">=7.1"
     },
