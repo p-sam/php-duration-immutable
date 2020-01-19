@@ -1,0 +1,19 @@
+includes:
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - vendor/korbeil/phpstan-generic-rules/extension.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    generic_rules:
+        mb_string_rules: true
+
+    ignoreErrors:
+        - '#Call to an undefined method DateTimeInterface::add\(\).#'
+        - '#DateTimeImmutable::createFromMutable\(\) expects DateTime, DateTimeInterface given#'
+
+    inferPrivatePropertyTypeFromConstructor: true
+
+    level: 7
+
+    paths:
+        - src

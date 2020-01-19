@@ -1,0 +1,33 @@
+{
+    "name": "p-sam/duration-immutable",
+    "description": "Immutable class to store time durations",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "korbeil/phpstan-generic-rules": "^0.2.2",
+        "phpstan/phpstan": "^0.11.19",
+        "phpstan/phpstan-deprecation-rules": "^0.11.2",
+        "phpstan/phpstan-strict-rules": "^0.11.1"
+    },
+    "autoload": {
+        "psr-4": { "SP\\DurationImmutable\\": "src/" }
+    },
+    "scripts": {
+        "lint": [
+            "@lint:format",
+            "@lint:analyze"
+        ],
+        "lint:fix": [
+            "@lint:format:fix",
+            "@lint:analyze"
+        ],
+        "lint:analyze": "phpstan analyse",
+        "lint:tools:csfixer": "php-cs-fixer fix --config=.php_cs --cache-file=.php_cs.cache --verbose",
+        "lint:format:fix": "@lint:tools:csfixer",
+        "lint:format": "@lint:tools:csfixer --dry-run --diff --diff-format=udiff"
+    }
+}
